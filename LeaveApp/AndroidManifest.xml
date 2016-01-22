@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.osi.leaveapp.ui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+   <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.osi.leaveapp.ui.Splash"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Login Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Login"></activity>
+        
+        <!-- Dashboard Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Dashboard"></activity>
+        
+        <!-- Profile Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Profile"></activity>
+        
+        <!-- Leave Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Leave"></activity>
+        
+        <!-- Requisition Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Requisition"></activity>
+        
+        
+        <!-- Summary Screen -->
+        <activity android:name="org.osi.leaveapp.ui.Summary"></activity>
+    </application>
+
+</manifest>

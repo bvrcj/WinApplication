@@ -1,0 +1,90 @@
+package org.osi.leaveapp.ui;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
+
+public class Requisition extends Activity{
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		Log.d("RequisitionScreen","onCreate invoked");  
+		setContentView(R.layout.requisitions_layout);
+		
+		ImageView home = (ImageView)findViewById(R.id.home);
+		home.setOnClickListener(new View.OnClickListener(){
+		    public void onClick(View v) {
+		    	Log.d("EmployeeProfileScreen","home invoked");  
+		    	startActivity(new Intent(Requisition.this,Dashboard.class));
+		    }
+		});
+		
+		ImageView logout = (ImageView)findViewById(R.id.logout);
+		logout.setOnClickListener(new View.OnClickListener(){
+		    public void onClick(View v) {
+		    	Log.d("EmployeeProfileScreen","Logout invoked");  
+		    	startActivity(new Intent(Requisition.this,Login.class));
+		    }
+		});
+	}
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		Log.d("RequisitionScreen","onStart invoked");  
+	}
+	
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		Log.d("RequisitionScreen","onStop invoked");  
+	}
+	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		Log.d("RequisitionScreen","onRestart invoked");  
+	}
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Log.d("RequisitionScreen","onResume invoked");  
+	}
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.d("RequisitionScreen","onDestory invoked");  
+	}
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Log.d("RequisitionScreen","onPause invoked");  
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		Log.d("RequisitionScreen","onKeyDown invoked");  
+	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+	        // your code
+	        return true;
+	    }
+
+	    return super.onKeyDown(keyCode, event);
+	}
+}

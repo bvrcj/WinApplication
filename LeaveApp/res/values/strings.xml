@@ -1,0 +1,75 @@
+<resources>
+
+    <string name="app_name">Leave</string>
+    <string name="app_version">Version 1.0</string>
+    
+    <string name="website">www.osius.com</string>
+    <string name="rights">All rights reserved</string>
+    <string name="home">Home</string>
+    <string name="mainmenu">MAIN MENU</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Login Screen -->
+    <string name="user_login">EMPLOYEE LOGIN</string>
+    <string name="user_name_hint">Enter User Name</string>
+    <string name="user_name">User Name</string>
+    <string name="user_password_hint">Enter Password</string>
+    <string name="user_password">Password</string>
+    <string name="user_forgot_btn">Forgot Password</string>
+    <string name="user_login_btn">      Login     </string>
+    
+    <!--  Employee Screen -->
+     <string name="employee_profile">EMPLOYEE INFORMATION</string>
+     <string name="employee_details">EMPLOYEE DETAILS</string>
+	 <string name="employee_id">Id</string>
+	 <string name="employee_name">Name</string>
+	 <string name="employee_position">Designation</string>
+	 <string name="employee_type">Emp Type</string>
+	 <string name="employee_supervisor1">Manager I:</string>
+	 <string name="employee_supervisor2">Manager II:</string>
+	 
+	 <!-- Apply Leave Screen -->
+	 <string name="apply_leave">APPLY LEAVE</string>
+	 <string name="leave_date_sample">MMM DD YYYY</string>
+	 <string name="leave_number">0</string>
+	 <string name="leave_type">Leave Type</string>
+     <string name="leave_startdate">Start Date</string>
+     <string name="leave_enddate">End Date</string>
+     <string name="leave_totaldays">Total Days</string>
+     <string name="leave_balance">Available Balance</string>
+     <string name="leave_status">Status</string>
+     <string name="leave_contactno">Contact No</string>
+     <string name="leave_reason">Reason</string>
+     <string name="leave_address">Address</string>
+     <string name="empty">             </string>
+     <string-array name="leave_types">
+        <item>Probation Leave</item>
+        <item>Parenity Leave</item>
+        <item>Marriage Leave</item>
+        <item>Bereavement Leave</item>
+    </string-array>
+    
+     <!-- Requisitions Screen -->
+	 <string name="requisitions_leave">APPLY REQUISITION</string>
+	 <string name="requisitions_date_sample">MMM DD YYYY</string>
+	 <string name="requisitions_number">0</string>
+     <string name="requisitions_fromdate">From Date</string>
+     <string name="requisitions_todate">To Date</string>
+     <string name="requisitions_totalworkdingdays">Total Work Days</string>
+     <string name="requisitions_totalworkhours">Total Work Hours</string>
+      <string name="requisitions_reason">Reason</string>
+      <string name="requisitions_approver_comments">Approver Comments</string>
+     <string name="requisitions_status">Requisition Status</string>
+     <string name="empty">             </string>
+     
+     <!-- Employee Leave Summary Screen List -->
+	 <string name="leave_summary">LEAVE SUMMARY</string>
+	 
+	 <!-- Employee Leave Details Screen List -->
+	 <string name="leave_details">LEAVE DETAIL</string>
+	 
+	  <!-- Approve Employee  Screen List -->
+	 <string name="leave_approve">APPROVE LEAVE</string>
+	 
+    
+</resources>
