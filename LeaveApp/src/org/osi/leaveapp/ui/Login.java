@@ -73,7 +73,7 @@ public class Login extends Activity{
 	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		Log.d("EmployeeProfileScreen","onKeyDown invoked");  
+		Log.d("LoginScreen","onKeyDown invoked");  
 	    if (keyCode == KeyEvent.KEYCODE_BACK) {
 	        // your code
 	    	System.exit(0);
@@ -85,7 +85,7 @@ public class Login extends Activity{
 	
 	@Override
 	public void onBackPressed() {
-	    Log.d("EmployeeProfileScreen","onBackPressed invoked");
+	    Log.d("LoginScreen","onBackPressed invoked");
 	    System.exit(0);
 	}
 }
