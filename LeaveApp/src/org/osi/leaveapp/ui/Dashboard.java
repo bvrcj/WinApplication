@@ -6,11 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class Dashboard extends Activity {
-	Button emp_profile;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -19,20 +17,18 @@ public class Dashboard extends Activity {
 		Log.d("DashboardScreen", "onCreate invoked");
 		setContentView(R.layout.main_layout);
 
-		emp_profile = (Button) findViewById(R.id.emp_profile);
+		ImageView emp_profile = (ImageView) findViewById(R.id.emp_profile);
 		emp_profile.setOnClickListener(new ScreenNavigation());
 
-		Button emp_apply_leave = (Button) findViewById(R.id.emp_apply_leave);
+		ImageView emp_apply_leave = (ImageView) findViewById(R.id.emp_apply_leave);
 		emp_apply_leave.setOnClickListener(new ScreenNavigation());
 
-		Button emp_requisitions_leave = (Button) findViewById(R.id.emp_requisitions_leave);
+		ImageView emp_requisitions_leave = (ImageView) findViewById(R.id.emp_requisitions_leave);
 		emp_requisitions_leave.setOnClickListener(new ScreenNavigation());
 
-		Button emp_leave_summary = (Button) findViewById(R.id.emp_leave_summary);
+		ImageView emp_leave_summary = (ImageView) findViewById(R.id.emp_leave_summary);
 		emp_leave_summary.setOnClickListener(new ScreenNavigation());
 
-		Button emp_leave_approve = (Button) findViewById(R.id.emp_leave_approve);
-		emp_leave_approve.setOnClickListener(new ScreenNavigation());
 		
 		ImageView logout = (ImageView)findViewById(R.id.logout);
 		logout.setOnClickListener(new View.OnClickListener(){

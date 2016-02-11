@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Leave</string>
+    <string name="app_name">LMS</string>
     <string name="app_version">Version 1.0</string>
     
     <string name="website">www.osius.com</string>
@@ -67,9 +67,18 @@
 	 
 	 <!-- Employee Leave Details Screen List -->
 	 <string name="leave_details">LEAVE DETAIL</string>
+	 <string name="leave_type">Leave Type</string>
+	 <string name="leave_frm_date">From Date</string>
+	 <string name="leave_to_date">To Date</string>
+	 <string name="leave_status_by">Approved By</string>
+	 <string name="leave_description">Description</string>
+	 <string name="dummy_text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
 	 
 	  <!-- Approve Employee  Screen List -->
 	 <string name="leave_approve">APPROVE LEAVE</string>
+	 
+	 <!-- About Employee  Screen List -->
+	 <string name="about_us">ABOUT US</string>
 	 
     
 </resources>

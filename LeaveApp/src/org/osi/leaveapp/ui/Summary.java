@@ -1,15 +1,38 @@
 package org.osi.leaveapp.ui;
 
+import org.osi.leaveapp.component.CustomListAdapter;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 public class Summary extends Activity{
+	ListView list;
+	String[] itemname ={
+			"Bereavement Leave",
+			"Comp. off ",
+			"Probation leave ",
+			"Loss of pay ",
+			"Marriage leave",
+			"Parenity leave"
+		};
 	
+	Integer[] imgid={
+			R.drawable.icon,
+			R.drawable.icon,
+			R.drawable.icon,
+			R.drawable.icon,
+			R.drawable.icon,
+			R.drawable.icon
+	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -31,6 +54,25 @@ public class Summary extends Activity{
 		    	Log.d("EmployeeProfileScreen","Logout invoked");  
 		    	startActivity(new Intent(Summary.this,Login.class));
 		    }
+		});
+		
+		CustomListAdapter adapter=new CustomListAdapter(this, itemname, imgid);
+		list=(ListView)findViewById(R.id.list);
+		list.setAdapter(adapter);
+		
+		list.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				String Slecteditem= itemname[+position];
+				//Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+				Intent i = new Intent(Summary.this,SummaryDetail.class);   
+				i.putExtra("LEAVE_TYPE", Slecteditem);
+				startActivity(new Intent(Summary.this,SummaryDetail.class));
+				
+			}
 		});
 	}
 	

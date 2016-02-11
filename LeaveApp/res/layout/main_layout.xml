@@ -15,7 +15,7 @@
   
         <ImageView
             android:id="@+id/logout"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
@@ -26,13 +26,31 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="10dp"
-            android:text="@string/mainmenu"
+            android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="15dip"
             android:textStyle="bold" />
     </RelativeLayout>
 
-
+	<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical" >
+  
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/mainmenu"
+            android:textColor="@color/white"
+            android:textSize="15dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
@@ -40,92 +58,49 @@
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true" >
-
-        <LinearLayout
+        
+       
+        
+        <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center" >
-
-            <Button
-                android:id="@+id/emp_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginTop="20dp"
-                android:background="@color/leaf_green"
-                android:padding="10dp"
-                android:text="@string/employee_details"
-                android:textColor="@color/white"
-                android:textSize="15dip"
-                android:textStyle="bold" 
-                android:layout_weight="1"/>
             
-         
+            <ImageView
+            android:id="@+id/emp_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/emp" />
             
-            <Button
-                android:id="@+id/emp_apply_leave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginTop="20dp"
-                android:background="@color/different"
-                android:padding="10dp"
-                android:text="@string/apply_leave"
-                android:textColor="@color/white"
-                android:textSize="15dip"
-                android:textStyle="bold" 
-                android:layout_weight="1"/>
+            <ImageView
+            android:id="@+id/emp_apply_leave"
+            android:layout_toRightOf="@+id/emp_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/leave" />
             
-            <Button
-                android:id="@+id/emp_requisitions_leave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginTop="20dp"
-                android:background="@color/orange"
-                android:padding="10dp"
-                android:text="@string/requisitions_leave"
-                android:textColor="@color/white"
-                android:textSize="15dip"
-                android:textStyle="bold" 
-                android:layout_weight="1"/>
+            <ImageView
+            android:id="@+id/emp_requisitions_leave"
+            android:layout_below="@+id/emp_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/requisition" />
             
-            <Button
-                android:id="@+id/emp_leave_summary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginTop="20dp"
-                android:background="@color/dark_pink"
-                android:padding="10dp"
-                android:text="@string/leave_summary"
-                android:textColor="@color/white"
-                android:textSize="15dip"
-                android:textStyle="bold" 
-                android:layout_weight="1"/>
-            
-            <Button
-                android:id="@+id/emp_leave_approve"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginTop="20dp"
-                android:background="@color/darkred"
-                android:padding="10dp"
-                android:text="@string/leave_approve"
-                android:textColor="@color/white"
-                android:textSize="15dip"
-                android:textStyle="bold"
-                android:layout_weight="1" />
-            
-        </LinearLayout>
+            <ImageView
+            android:id="@+id/emp_leave_summary"
+            android:layout_below="@+id/emp_apply_leave"
+            android:layout_toRightOf="@+id/emp_requisitions_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/summary" />
+        </RelativeLayout>
+		
     </ScrollView>
 
     <RelativeLayout

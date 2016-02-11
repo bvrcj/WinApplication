@@ -16,10 +16,11 @@
             android:id="@+id/home"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
             android:clickable="true"
             android:src="@drawable/home" />
+        
          
          <ImageView
             android:id="@+id/logout"
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="10dp"
-            android:text="@string/employee_profile"
+            android:text="@string/leave_details"
             android:textColor="@color/white"
             android:textSize="15dip"
             android:textStyle="bold" />
@@ -61,7 +62,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/employee_id_text"
+                    android:id="@+id/leave_type_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -69,14 +70,14 @@
                     android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_id"
+                    android:text="Leave Type"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
                 <TextView
-                    android:id="@+id/employee_id_value"
+                    android:id="@+id/leave_type_is"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -84,8 +85,9 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_bg"
                     android:gravity="right"
-                    android:hint="1547"
                     android:padding="10dp"
+                    android:text="Sick Leave"
+                    android:hint="Sick Leave"
                     android:textColor="@color/white"
                      android:textSize="15dip"
                     android:textColorHint="@color/white"
@@ -100,7 +102,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/employee_name_text"
+                    android:id="@+id/leave_frm_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -108,14 +110,14 @@
                     android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_name"
+                    android:text="@string/leave_frm_date"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
                 <TextView
-                    android:id="@+id/employee_name_value"
+                    android:id="@+id/leave_frm_date_is"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -123,7 +125,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_bg"
                     android:gravity="right"
-                    android:hint="B V R Chaitanya"
+                    android:hint="12/17/2015"
                     android:padding="10dp"
                     android:textColor="@color/white"
                      android:textSize="15dip"
@@ -147,14 +149,14 @@
                     android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_position"
+                    android:text="@string/leave_to_date"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
                 <TextView
-                    android:id="@+id/employee_position_value"
+                    android:id="@+id/leave_to_date_is"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -162,7 +164,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_bg"
                     android:gravity="right"
-                    android:hint="Sr.Engineer"
+                    android:hint="12/18/2015"
                     android:padding="10dp"
                     android:textColor="@color/white"
  					android:textSize="17dip"
@@ -178,7 +180,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/employee_type_text"
+                    android:id="@+id/leave_status_by_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -186,14 +188,14 @@
                     android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_type"
+                    android:text="@string/leave_status_by"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
                 <TextView
-                    android:id="@+id/employee_type_value"
+                    android:id="@+id/leave_status_by_is"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -201,7 +203,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_bg"
                     android:gravity="right"
-                    android:hint="Permanent"
+                    android:hint="Rajesh"
                     android:padding="10dp"
                     android:textColor="@color/white"
  					android:textSize="17dip"
@@ -218,7 +220,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/employee_supervisor1_text"
+                    android:id="@+id/leave_description_by_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
@@ -226,27 +228,13 @@
                     android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_supervisor1"
+                    android:text="@string/leave_description"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/employee_supervisor1_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15sp"
-                    android:layout_marginRight="15sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/edittext_bg"
-                    android:gravity="right"
-                    android:hint="Rajesh"
-                    android:padding="10dp"
-                    android:textColor="@color/white"
- 					android:textSize="17dip"
-                    android:textColorHint="@color/white"
-                    android:layout_weight="1"/>
+                
             </LinearLayout>
             
          <LinearLayout
@@ -257,35 +245,20 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/employee_supervisor2_text"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/leave_description_is"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5dp"
                     android:gravity="left"
-                    android:background="@drawable/labeltext_bg"
-                    android:text="@string/employee_supervisor2"
+                    android:text="@string/dummy_text"
                     android:padding="10dp"
                     android:textSize="18dip"
                     android:textColor="@color/white"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/employee_supervisor2_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15sp"
-                    android:layout_marginRight="15sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/edittext_bg"
-                    android:gravity="right"
-                    android:hint="Rajesh"
-                    android:padding="10dp"
-                    android:textColor="@color/white"
- 					android:textSize="17dip"
-                    android:textColorHint="@color/white"
-                    android:layout_weight="1"/>
+                
             </LinearLayout>
             
         </RelativeLayout>
