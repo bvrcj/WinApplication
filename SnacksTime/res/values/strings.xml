@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SnacksTime</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="greeting">Good Evening, Snacks Time</string>
+    <string name="noodles">Tasty Noodles</string>
+    <string name="idlies">Tasty Idlies</string>
+    <string name="dosa">Tasty Dosa</string>
+    <string name="mirchi">Tasty Mirchi</string>
+    <string name="vada">Tasty Vada</string>
+    <string name="panipuri">Tasty Panipuri</string>
+    <string name="puri">Tasty Puri</string>
+    <string name="tomatobath">Tomatobath</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF6600</color>
+    <color name="darkred">#cc0000</color>
+    <color name="green">#006400</color>
+	<color name="black">#000000</color>
+	<color name="different">#454545</color>
+	<color name="trans">#80FFFFFF</color>
+	<color name="leaf_green">#43bd00</color>
+	<color name="gray">#acacac</color>
+	<color name="drak_gray">#5d5d5d</color>
+	<color name="background">#00aff0</color>
+	<color name="top_strip">#04306D</color>
+	<color name="dark_pink">#D823D2</color>
+</resources>	
