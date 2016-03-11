@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:38:57 +0530] "GET /Snacks/snacks/1/3-08-2016%20-%20Tuesday/ HTTP/1.1" 200 89 http-bio-8999-exec-1 821
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:39:02 +0530] "GET /Snacks/snacks/2/3-08-2016%20-%20Tuesday/ HTTP/1.1" 200 89 http-bio-8999-exec-2 84
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:39:48 +0530] "GET /Snacks/snacks/2/3-3-2016%20-%20Thursday/ HTTP/1.1" 200 87 http-bio-8999-exec-3 108
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:49:53 +0530] "GET /Snacks/snacks/2/3-3-2016%20-%20Thursday/ HTTP/1.1" 200 87 http-bio-8999-exec-5 71
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:55:32 +0530] "GET /Snacks/snacks/2/3-3-2016%20-%20Thursday/ HTTP/1.1" 200 87 http-bio-8999-exec-7 78
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:55:37 +0530] "GET /Snacks/snacks/1/3-3-2016%20-%20Thursday/ HTTP/1.1" 200 86 http-bio-8999-exec-8 60
+0:0:0:0:0:0:0:1 - - [04/Mar/2016:15:55:57 +0530] "GET /Snacks/snacks/2/3-4-2016%20-%20Friday/ HTTP/1.1" 200 101 http-bio-8999-exec-9 63

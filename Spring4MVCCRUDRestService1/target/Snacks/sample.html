@@ -1,0 +1,126 @@
+<!-- <html ng-app="myApp">
+<script src="./js/angular.min.js"></script>
+<body>
+<div ng-controller = "myCtrl">
+    <input type="file" file-model="myFile" multiple="multiple"/>
+    <button ng-click="uploadFile()">upload me</button>
+</div>
+<script>
+var myApp = angular.module('myApp', []);
+
+myApp.directive('fileModel', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var model = $parse(attrs.fileModel);
+            var modelSetter = model.assign;
+            
+            element.bind('change', function(){
+                scope.$apply(function(){
+                    //modelSetter(scope, element[0].files);
+                     // STORE THE FILE OBJECT IN AN ARRAY.
+                for (var i = 0; i < e.files.length; i++) {
+                    scope.files.push(e.files[i])
+                }
+                });
+            });
+        }
+    };
+}]);
+
+myApp.service('fileUpload', ['$http', function ($http) {
+    this.uploadFileToUrl = function(file, uploadUrl){
+        var fd = new FormData();
+        fd.append('file', file);
+        fd.append('name', "Chaitanya");
+        fd.append('description', "Chaitanya Impact File upload testing");
+        fd.append('venue', "Hyderabad");
+        $http.post(uploadUrl, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        })
+        .success(function(){
+        })
+        .error(function(){
+        });
+    }
+}]);
+
+myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
+    
+    $scope.uploadFile = function(){
+        var file = $scope.myFile;
+        console.log('file is ' );
+        console.dir(file);
+        var uploadUrl = "http://localhost:8999/Snacks/uploadMultipleFile/";
+        fileUpload.uploadFileToUrl(file, uploadUrl);
+    };
+    
+}]);
+</script>
+</body>
+
+</html>
+--> 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload Example in AngularJS</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+</head>
+
+<body ng-app="fupApp">
+
+    <div ng-controller="fupController">
+        <input type="file" id="file" name="file" multiple
+            onchange="angular.element(this).scope().getFileDetails(this)" />
+
+        <input type="button" ng-click="uploadFiles()" value="Upload" />
+
+       
+    </div>
+
+</body>
+<script>
+    var myApp = angular.module('fupApp', []);
+
+    myApp.controller('fupController', function ($scope) {
+
+        // GET THE FILE INFORMATION.
+        $scope.getFileDetails = function (e) {
+
+            $scope.files = [];
+            $scope.$apply(function () {
+
+                // STORE THE FILE OBJECT IN AN ARRAY.
+                for (var i = 0; i < e.files.length; i++) {
+                    $scope.files.push(e.files[i])
+                }
+
+            });
+        };
+
+        // NOW UPLOAD THE FILES.
+        $scope.uploadFiles = function () {
+
+            //FILL FormData WITH FILE DETAILS.
+            var data = new FormData();
+            data.append("name","chaitanya");
+            data.append("venue","hyderabad");
+            data.append("description","great event");
+            for (var i in $scope.files) {
+                data.append("file", $scope.files[i]);
+            }
+
+            // ADD LISTENERS.
+            var objXhr = new XMLHttpRequest();
+            // SEND FILE DETAILS TO THE API.
+            objXhr.open("POST", "http://localhost:8999/Snacks/uploadMultipleFile/");
+            objXhr.send(data);
+        }
+
+       
+    });
+</script>
+</html>
